@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:100,200,300,400,500,600,700|Exo:100,200,300,400,500,600,700');
 
-/* Always set the map height explicitly to define the size of the div
-       * element that contains the map. */
+/*--------Related to the Map-----*/
 div #mapa {
     height: 100%;
 }
@@ -16,49 +15,161 @@ html{
 }
 
 .map-size{
-    height: 80%;
+    height: 100%;
 }
 
-.flip-card {
-    background-color: transparent;
-    width: 300px;
-    height: 300px;
-    perspective: 1000px;
-}
 
-.flip-card-inner {
+/*--------Cards-----*/
+.container {
     position: relative;
     width: 100%;
-    height: 100%;
-    text-align: center;
-    transition: transform 0.6s;
-    transform-style: preserve-3d;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    max-width: 400px;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    justify-content: center;
+    align-items:center;
 }
 
-.flip-card:hover .flip-card-inner {
-    transform: rotateY(180deg);
+.image {
+    display: block;
+    width: 100%;
+    height: auto;
 }
 
-.flip-card-front, .flip-card-back {
+.overlay {
     position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
     width: 100%;
     height: 100%;
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-}
-
-.flip-card-front {
-    background-color: #bbb;
-    color: black;
-}
-
-.flip-card-back {
-    background-color: #2980b9;
-    color: white;
-    transform: rotateY(180deg);
-}
-
-.fond{
+    margin: auto;
+    opacity: 0;
+    transition: .3s ease;
     background-color: gray;
+
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    justify-content: center;
+    align-items:center;
+}
+
+.container:hover .overlay {
+    opacity: 1;
+}
+
+.icon {
+    color: white;
+    font-size: 420%;
+    position: relative;
+    text-align: center;
+}
+
+.fa-user:hover {
+    color: #eee;
+}
+
+
+/*--------Images Icons-----*/
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial;
+}
+
+.header {
+    text-align: center;
+    padding: 32px;
+}
+
+.row {
+    display: -ms-flexbox; /* IE10 */
+    display: flex;
+    -ms-flex-wrap: wrap; /* IE10 */
+    flex-wrap: wrap;
+    padding: 0 4px;
+}
+
+/* Create four equal columns that sits next to each other */
+.column {
+    -ms-flex: 25%; /* IE10 */
+    flex: 25%;
+    max-width: 25%;
+    padding: 0 4px;
+}
+
+.column a p {
+    margin-top: 8px;
+    vertical-align: middle;
+    width: 100%;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+    .column {
+        -ms-flex: 50%;
+        flex: 50%;
+        max-width: 50%;
+    }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+    .column {
+        -ms-flex: 100%;
+        flex: 100%;
+        max-width: 100%;
+    }
+}
+
+
+
+/* Styling for an info pane that slides out from the left.
+  * Hidden by default. */
+#panel {
+    height: 100%;
+    width: null;
+    background-color: white;
+    position: fixed;
+    z-index: 1;
+    overflow-x: hidden;
+    transition: all .2s ease-out;
+}
+
+.open {
+    width: 250px;
+}
+
+/* Styling for place details */
+.hero {
+    width: 100%;
+    height: auto;
+    max-height: 166px;
+    display: block;
+}
+
+.place,
+p {
+    font-family: 'open sans', arial, sans-serif;
+    padding-left: 18px;
+    padding-right: 18px;
+}
+
+.details {
+    color: darkslategrey;
+}
+
+a {
+    text-decoration: none;
+    color: cadetblue;
 }
