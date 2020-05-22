@@ -2,29 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7404c15b-6f35-4327-8acc-64c80cb3528e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/assets/css/style3.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/js/main.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/exampleGoogleMaps.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/bag-1230527__480.webp" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/no used/bag-1230527__480.webp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/breakfast-690128_1280.webp" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/no used/breakfast-690128_1280.webp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/cheers-839865_1280.webp" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/party.webp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/crossfit-534615__480.webp" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/no used/crossfit-534615__480.webp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/fashion-2591480__480.webp" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/shop.webp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/head-650878_960_720.webp" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/no used/head-650878_960_720.webp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/jogging-2343558__480.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/exercises.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/meal-918639_1280.webp" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/restaurants.webp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/money-256319__480.webp" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/no used/money-256319__480.webp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/morning-819362__480.webp" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/cafe.webp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/pngtree-disco-ball-vector-icon-illustration-png-image_1580665.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/no used/pngtree-disco-ball-vector-icon-illustration-png-image_1580665.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/shopping-606993__480.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/no used/shopping-606993__480.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/spaghetti-2931846__480.webp" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/no used/spaghetti-2931846__480.webp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/woman-3040029__480.webp" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/no used/woman-3040029__480.webp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/young-couple-receiving-head-massage-260nw-794084224.webp" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/no used/young-couple-receiving-head-massage-260nw-794084224.webp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/css/style3.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/style3.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/js/mapa.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/mapa.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index2.html" beforeDir="false" afterPath="$PROJECT_DIR$/index2.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,7 +49,7 @@
       <recent name="$PROJECT_DIR$/.idea/assets/js" />
     </key>
   </component>
-  <component name="RunManager" selected="JavaScript Debug.exampleGoogleMaps.html">
+  <component name="RunManager" selected="JavaScript Debug.index.html">
     <configuration name="exampleGoogleMaps.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/Near-master/exampleGoogleMaps.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
@@ -76,8 +58,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JavaScript Debug.exampleGoogleMaps.html" />
         <item itemvalue="JavaScript Debug.index.html" />
+        <item itemvalue="JavaScript Debug.exampleGoogleMaps.html" />
       </list>
     </recent_temporary>
   </component>
@@ -104,7 +86,8 @@
       <option name="presentableId" value="Default" />
       <updated>1589754382664</updated>
       <workItem from="1589754385659" duration="3220000" />
-      <workItem from="1589999776341" duration="21603000" />
+      <workItem from="1589999776341" duration="21988000" />
+      <workItem from="1590133122829" duration="19362000" />
     </task>
     <servers />
   </component>

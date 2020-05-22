@@ -47,6 +47,7 @@ html{
     right: 0;
     width: 100%;
     height: 100%;
+    max-width: 370px;
     margin: auto;
     opacity: 0;
     transition: .3s ease;
@@ -116,6 +117,9 @@ body {
 
 /* Responsive layout - makes a two column-layout instead of four columns */
 @media screen and (max-width: 800px) {
+    .small-map{
+        height: 50%;
+    }
     .column {
         -ms-flex: 50%;
         flex: 50%;
@@ -125,6 +129,9 @@ body {
 
 /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 600px) {
+    .small-map{
+        height: 50%;
+    }
     .column {
         -ms-flex: 100%;
         flex: 100%;
@@ -134,42 +141,32 @@ body {
 
 
 
-/* Styling for an info pane that slides out from the left.
-  * Hidden by default. */
 #panel {
     height: 100%;
-    width: null;
+    width: 100%;
     background-color: white;
-    position: fixed;
-    z-index: 1;
-    overflow-x: hidden;
     transition: all .2s ease-out;
 }
 
-.open {
-    width: 250px;
-}
-
-/* Styling for place details */
-.hero {
-    width: 100%;
-    height: auto;
-    max-height: 166px;
-    display: block;
-}
-
-.place,
-p {
+.place, p {
     font-family: 'open sans', arial, sans-serif;
     padding-left: 18px;
     padding-right: 18px;
 }
 
-.details {
+.leter-color-card {
     color: darkslategrey;
 }
 
 a {
     text-decoration: none;
-    color: cadetblue;
+    color: #3e78a0;
+}
+
+#photo {
+    min-height: 360px;
+    width: 100%;
+    height: auto;
+    max-height: 411px;
+    display: block;
 }

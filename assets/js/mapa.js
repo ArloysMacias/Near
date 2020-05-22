@@ -77,29 +77,11 @@ function initMap()
 
         service.nearbySearch(request, function(results, status) {
             if (status === google.maps.places.PlacesServiceStatus.OK) {
-                // for (var i = 0; i < results.length; i++) {
-                //     createMarker(results[i]);
-                // }
                 createMarker(results);
             }
         });
     });
 }
-
-// function createMarker(place)
-// {
-//     // Create Marker
-//     var marker = new google.maps.Marker({
-//         map: map,
-//         position: place.geometry.location
-//     });
-//
-//     // Event click to the marker
-//     google.maps.event.addListener(marker, 'click', function() {
-//         infowindow.setContent(place.name);
-//         infowindow.open(map, this);
-//     });
-// }
 
 
 // Set markers at the location of each place result
@@ -134,9 +116,13 @@ function createMarker(places) {
 // Builds an InfoWindow to display details above the marker
 function showDetails(placeResult, marker, status) {
     if (status == google.maps.places.PlacesServiceStatus.OK) {
+
         var placeInfowindow = new google.maps.InfoWindow();
         var rating = "None";
-        if (placeResult.rating) rating = placeResult.rating;
+
+        if (placeResult.rating) {
+            rating = placeResult.rating;
+        }
         placeInfowindow.setContent('<div><strong>' + placeResult.name +
             '</strong><br>' + 'Rating: ' + rating + '</div>');
         placeInfowindow.open(marker.map, marker);
@@ -148,53 +134,100 @@ function showDetails(placeResult, marker, status) {
     }
 }
 
-// Displays place details in a sidebar
-function showPanel(placeResult) {
-    // If infoPane is already open, close it
-    if (infoPane.classList.contains("open")) {
-        infoPane.classList.remove("open");
+// // Displays place details in a sidebar
+// function showPanel(placeResult) {
+//     // If infoPane is already open, close it
+//     if (infoPane.classList.contains("open")) {
+//         infoPane.classList.remove("open");
+//     }
+//
+//     // Clear the previous details
+//     while (infoPane.lastChild) {
+//         infoPane.removeChild(infoPane.lastChild);
+//     }
+//
+//     // Add the primary photo, if there is one
+//     if (placeResult.photos) {
+//         var firstPhoto = placeResult.photos[0];
+//         var photo = document.createElement('img');
+//         photo.classList.add('hero');
+//         photo.src = firstPhoto.getUrl();
+//         infoPane.appendChild(photo);
+//     }
+//
+//     // Add place details with text formatting
+//     var name = document.createElement('h1');
+//     name.classList.add('place');
+//     name.textContent = placeResult.name;
+//     infoPane.appendChild(name);
+//
+//     if (placeResult.rating) {
+//         var rating = document.createElement('p');
+//         rating.classList.add('details');
+//         rating.textContent = `Rating: ${placeResult.rating} \u272e`;
+//         infoPane.appendChild(rating);
+//     }
+//     var address = document.createElement('p');
+//     address.classList.add('details');
+//     address.textContent = placeResult.formatted_address;
+//     infoPane.appendChild(address);
+//
+//     if (placeResult.website) {
+//         var websitePara = document.createElement('p');
+//         var websiteLink = document.createElement('a');
+//         var websiteUrl = document.createTextNode(placeResult.website);
+//         websiteLink.appendChild(websiteUrl);
+//         websiteLink.title = placeResult.website;
+//         websiteLink.href = placeResult.website;
+//         websitePara.appendChild(websiteLink);
+//         infoPane.appendChild(websitePara);
+//     }
+//
+//     // Open the infoPane
+//     infoPane.classList.add("open");
+// }
+
+function showPanel(placeResult){
+
+    var firstPhoto = placeResult.photos[0];
+    var name = placeResult.name;
+    var rat = placeResult.rating;
+    var websiteUrl = placeResult.website;
+    var address=placeResult.formatted_address;
+
+    fillPanel(placeResult,firstPhoto,rat,websiteUrl,address,name)
+
+}
+
+function fillPanel(placeResult,firstPhoto,rat,websiteUrl,add,name){
+
+    if (firstPhoto) {
+        document.getElementById('photo').src = firstPhoto.getUrl();
     }
 
-    // Clear the previous details
-    while (infoPane.lastChild) {
-        infoPane.removeChild(infoPane.lastChild);
+    if (name){
+        document.getElementById("name").innerHTML = name;
     }
 
-    // Add the primary photo, if there is one
-    if (placeResult.photos) {
-        var firstPhoto = placeResult.photos[0];
-        var photo = document.createElement('img');
-        photo.classList.add('hero');
-        photo.src = firstPhoto.getUrl();
-        infoPane.appendChild(photo);
+    if (rat) {
+        document.getElementById('rating').textContent= `Rating: ${placeResult.rating} \u272e`;
     }
 
-    // Add place details with text formatting
-    var name = document.createElement('h1');
-    name.classList.add('place');
-    name.textContent = placeResult.name;
-    infoPane.appendChild(name);
-    if (placeResult.rating) {
-        var rating = document.createElement('p');
-        rating.classList.add('details');
-        rating.textContent = `Rating: ${placeResult.rating} \u272e`;
-        infoPane.appendChild(rating);
-    }
-    var address = document.createElement('p');
-    address.classList.add('details');
-    address.textContent = placeResult.formatted_address;
-    infoPane.appendChild(address);
-    if (placeResult.website) {
-        var websitePara = document.createElement('p');
-        var websiteLink = document.createElement('a');
-        var websiteUrl = document.createTextNode(placeResult.website);
-        websiteLink.appendChild(websiteUrl);
-        websiteLink.title = placeResult.website;
-        websiteLink.href = placeResult.website;
-        websitePara.appendChild(websiteLink);
-        infoPane.appendChild(websitePara);
+    if(add){
+        document.getElementById("address").textContent=`Address: ${add}`;
     }
 
-    // Open the infoPane
-    infoPane.classList.add("open");
+    if (websiteUrl) {
+        document.getElementById('web').textContent = websiteUrl;
+        document.getElementById('web').href = websiteUrl;
+    }
+
+}
+
+function removeElement(id) {
+    // remove all child nodes
+    var dv = document.getElementById(id);
+    while (dv.hasChildNodes()) {
+        dv.removeChild(dv.lastChild);
+    }
 }
