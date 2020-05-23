@@ -4,9 +4,13 @@
     <list default="true" id="7404c15b-6f35-4327-8acc-64c80cb3528e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/css/style3.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/style3.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/css/style2.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/style2.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/css/style3.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/main.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/js/mapa.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/mapa.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/maps.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index2.html" beforeDir="false" afterPath="$PROJECT_DIR$/index2.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,7 +91,7 @@
       <updated>1589754382664</updated>
       <workItem from="1589754385659" duration="3220000" />
       <workItem from="1589999776341" duration="21988000" />
-      <workItem from="1590133122829" duration="19362000" />
+      <workItem from="1590133122829" duration="36668000" />
     </task>
     <servers />
   </component>
@@ -240,25 +244,5 @@
       <screen x="1680" y="23" width="1920" height="982" />
     </state>
     <state x="2305" y="237" key="run.anything.popup/1680.23.1920.982/3600.23.1920.1057/0.23.1680.1027@1680.23.1920.982" timestamp="1589926398658" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/assets/js/main.js</url>
-          <line>2</line>
-          <option name="timeStamp" value="6" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/assets/js/main.js</url>
-          <option name="timeStamp" value="7" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/assets/js/main.js</url>
-          <line>12</line>
-          <option name="timeStamp" value="8" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

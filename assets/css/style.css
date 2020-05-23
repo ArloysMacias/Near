@@ -51,7 +51,7 @@ html{
     margin: auto;
     opacity: 0;
     transition: .3s ease;
-    background-color: gray;
+    background-color: #000000b8;
 
 
     display: flex;
@@ -73,8 +73,8 @@ html{
     text-align: center;
 }
 
-.fa-user:hover {
-    color: #eee;
+.fas:hover {
+    color: #ea4335;
 }
 
 
@@ -115,32 +115,6 @@ body {
     width: 100%;
 }
 
-/* Responsive layout - makes a two column-layout instead of four columns */
-@media screen and (max-width: 800px) {
-    .small-map{
-        height: 50%;
-    }
-    .column {
-        -ms-flex: 50%;
-        flex: 50%;
-        max-width: 50%;
-    }
-}
-
-/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 600px) {
-    .small-map{
-        height: 50%;
-    }
-    .column {
-        -ms-flex: 100%;
-        flex: 100%;
-        max-width: 100%;
-    }
-}
-
-
-
 #panel {
     height: 100%;
     width: 100%;
@@ -170,3 +144,42 @@ a {
     max-height: 411px;
     display: block;
 }
+
+
+    /* Responsive layout - makes a two column-layout instead of four columns */
+    @media screen and (max-width: 800px) {
+        .small-map{
+            height: 50%;
+        }
+        .column {
+            -ms-flex: 50%;
+            flex: 50%;
+            max-width: 50%;
+        }
+    }
+
+    /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+    @media screen and (max-width: 600px) {
+        .small-map{
+            height: 50%;
+        }
+
+        .column {
+            -ms-flex: 100%;
+            flex: 100%;
+            max-width: 100%;
+        }
+    }
+
+/* Mobile */
+@media (min-width: 768px){
+        .container {
+            max-width: 260px;
+        }
+    }
+/*Tablets*/
+@media (min-width: 1024px){
+
+}
+/*Wide Screen*/
+@media (min-width: 1200px) { }

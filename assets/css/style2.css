@@ -1,11 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:100,200,300,400,500,600,700|Exo:100,200,300,400,500,600,700');
 
-/* Always set the map height explicitly to define the size of the div
-       * element that contains the map. */
-div #mapa {
-    height: 100%;
-}
-/* Optional: Makes the sample page fill the window. */
+/* Size for make the map appear */
 body {
     height: 100%;
     margin: 0;
@@ -15,50 +10,117 @@ html{
     height: 100%;
 }
 
-.map-size{
-    height: 80%;
-}
-
-.flip-card {
-    background-color: transparent;
-    width: 300px;
-    height: 300px;
-    perspective: 1000px;
-}
-
-.flip-card-inner {
-    position: relative;
-    width: 100%;
-    height: 100%;
+/*Header*/
+.header {
     text-align: center;
-    transition: transform 0.6s;
-    transform-style: preserve-3d;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    padding: 32px;
 }
+/*End-Header*/
 
-.flip-card:hover .flip-card-inner {
-    transform: rotateY(180deg);
+/*Icons*/
+.icon {
+    color: grey;
+    font-size: 420%;
+    position: relative;
+    text-align: center;
 }
+.fas:hover {
+    color: #ea4335;
+}
+td{
+    text-align: center;
+}
+/*End-Icons*/
 
-.flip-card-front, .flip-card-back {
-    position: absolute;
-    width: 100%;
+/*Map*/
+.map-size{
     height: 100%;
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
+}
+div #mapa {
+    height: 100%;
+}
+/*End-Map*/
+
+/*Panel*/
+#panel {
+    height: 100%;
+    width: 100%;
+    background-color: white;
+    transition: all .2s ease-out;
 }
 
-.flip-card-front {
-    background-color: #bbb;
-    color: black;
+/*Photo*/
+#photo {
+    position: relative;
+    min-height: 314px;
+    width: 100%;
+    height: auto;
+    max-height: 411px;
+    display: block;
+}
+/*End-Photo*/
+
+
+/*Letters*/
+h1, p {
+    font-family: 'open sans', arial, sans-serif;
 }
 
-.flip-card-back {
-    background-color: #2980b9;
-    color: white;
-    transform: rotateY(180deg);
+p {
+    color: darkslategrey;
 }
 
-.fond{
-    background-color: gray;
+a {
+    color: #3e78a0;
 }
+
+.web-container{
+    display: inline-block;
+}
+text{
+    display: inline-block;
+    justify-content: normal;
+}
+/*End-Letters*/
+
+/*End-Panel*/
+
+
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+    .small-map{
+        height: 50%;
+    }
+    .column {
+        -ms-flex: 50%;
+        flex: 50%;
+        max-width: 50%;
+    }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+    .small-map{
+        height: 50%;
+    }
+
+    .column {
+        -ms-flex: 100%;
+        flex: 100%;
+        max-width: 100%;
+    }
+}
+
+/* Mobile */
+@media (min-width: 768px){
+    .small-map{
+
+    }
+}
+/*Tablets*/
+@media (min-width: 1024px){
+
+}
+/*Wide Screen*/
+@media (min-width: 1200px) { }
