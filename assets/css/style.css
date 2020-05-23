@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,200,300,400,500,600,700|Exo:100,200,300,400,500,600,700');
+
+/*--------Related to the Map-----*/
+div #mapa {
+    height: 100%;
+}
+/* Optional: Makes the sample page fill the window. */
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+html{
+    height: 100%;
+}
+
+.map-size{
+    height: 100%;
+}
+
+
+/*--------Cards-----*/
+.container {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    justify-content: center;
+    align-items:center;
+}
+
+.image {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    max-width: 370px;
+    margin: auto;
+    opacity: 0;
+    transition: .3s ease;
+    background-color: #000000b8;
+
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    justify-content: center;
+    align-items:center;
+}
+
+.container:hover .overlay {
+    opacity: 1;
+}
+
+.icon {
+    color: white;
+    font-size: 420%;
+    position: relative;
+    text-align: center;
+}
+
+.fas:hover {
+    color: #ea4335;
+}
+
+
+/*--------Images Icons-----*/
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial;
+}
+
+.header {
+    text-align: center;
+    padding: 32px;
+}
+
+.row {
+    display: -ms-flexbox; /* IE10 */
+    display: flex;
+    -ms-flex-wrap: wrap; /* IE10 */
+    flex-wrap: wrap;
+    padding: 0 4px;
+}
+
+/* Create four equal columns that sits next to each other */
+.column {
+    -ms-flex: 25%; /* IE10 */
+    flex: 25%;
+    max-width: 25%;
+    padding: 0 4px;
+}
+
+.column a p {
+    margin-top: 8px;
+    vertical-align: middle;
+    width: 100%;
+}
+
+#panel {
+    height: 100%;
+    width: 100%;
+    background-color: white;
+    transition: all .2s ease-out;
+}
+
+.place, p {
+    font-family: 'open sans', arial, sans-serif;
+    padding-left: 18px;
+    padding-right: 18px;
+}
+
+.leter-color-card {
+    color: darkslategrey;
+}
+
+a {
+    text-decoration: none;
+    color: #3e78a0;
+}
+
+#photo {
+    min-height: 360px;
+    width: 100%;
+    height: auto;
+    max-height: 411px;
+    display: block;
+}
+
+
+    /* Responsive layout - makes a two column-layout instead of four columns */
+    @media screen and (max-width: 800px) {
+        .small-map{
+            height: 50%;
+        }
+        .column {
+            -ms-flex: 50%;
+            flex: 50%;
+            max-width: 50%;
+        }
+    }
+
+    /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+    @media screen and (max-width: 600px) {
+        .small-map{
+            height: 50%;
+        }
+
+        .column {
+            -ms-flex: 100%;
+            flex: 100%;
+            max-width: 100%;
+        }
+    }
+
+/* Mobile */
+@media (min-width: 768px){
+        .container {
+            max-width: 260px;
+        }
+    }
+/*Tablets*/
+@media (min-width: 1024px){
+
+}
+/*Wide Screen*/
+@media (min-width: 1200px) { }

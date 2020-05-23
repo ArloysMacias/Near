@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,200,300,400,500,600,700|Exo:100,200,300,400,500,600,700');
+
+/* Size for make the map appear */
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+html{
+    height: 100%;
+}
+
+/*Header*/
+.header {
+    text-align: center;
+    padding: 32px;
+}
+/*End-Header*/
+
+/*Icons*/
+.icon {
+    color: grey;
+    font-size: 420%;
+    position: relative;
+    text-align: center;
+}
+.fas:hover {
+    color: #ea4335;
+}
+td{
+    text-align: center;
+}
+/*End-Icons*/
+
+/*Map*/
+.map-size{
+    height: 100%;
+}
+div #mapa {
+    height: 100%;
+}
+/*End-Map*/
+
+/*Panel*/
+#panel {
+    height: 100%;
+    width: 100%;
+    background-color: white;
+    transition: all .2s ease-out;
+}
+
+/*Photo*/
+#photo {
+    position: relative;
+    min-height: 314px;
+    width: 100%;
+    height: auto;
+    max-height: 411px;
+    display: block;
+}
+/*End-Photo*/
+
+
+/*Letters*/
+h1, p {
+    font-family: 'open sans', arial, sans-serif;
+}
+
+p {
+    color: darkslategrey;
+}
+
+a {
+    color: #3e78a0;
+}
+
+.web-container{
+    display: inline-block;
+}
+text{
+    display: inline-block;
+    justify-content: normal;
+}
+/*End-Letters*/
+
+/*End-Panel*/
+
+
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+    .small-map{
+        height: 50%;
+    }
+    .column {
+        -ms-flex: 50%;
+        flex: 50%;
+        max-width: 50%;
+    }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+    .small-map{
+        height: 50%;
+    }
+
+    .column {
+        -ms-flex: 100%;
+        flex: 100%;
+        max-width: 100%;
+    }
+}
+
+/* Mobile */
+@media (min-width: 768px){
+    .small-map{
+
+    }
+}
+/*Tablets*/
+@media (min-width: 1024px){
+
+}
+/*Wide Screen*/
+@media (min-width: 1200px) { }

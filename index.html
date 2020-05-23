@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+
+    <!-- Hover -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover-min.css">
+
+    <!--Boostrap-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+
+    <title>Near</title>
+    <!--My styles-->
+    <link rel="stylesheet" href="assets/css/style.css" type="text/css">
+
+
+</head>
+<body>
+
+<!-- Header -->
+<div class="header">
+    <h1>Near</h1>
+    <p>What do you want to do</p>
+</div>
+<!-- End-Header -->
+
+<!--Cards-->
+<div class="row mb-2">
+
+    <div class="container">
+        <img src="assets/images/party.webp" alt="Entretaiment" class="image">
+        <div class="overlay">
+            <div class="column">
+                <a href="#bar" class="icon" title="bar">
+                    <i class="fas fa-glass-martini-alt"></i>
+                </a>
+                <a href="#cafe" class="icon" title="cafe">
+                    <i class="fas fa-coffee"></i>
+                </a>
+            </div>
+            <div class="column">
+                <a href="#restaurant" class="icon" title="restaurants">
+                    <i class="fas fa-utensils"></i>
+                </a>
+                <a href="#" class="icon" title="Restaurant">
+                    <i class="fas fa-music"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <img src="assets/images/walk.jpg" alt="Entretaiment" class="image">
+        <div class="overlay">
+            <div class="column">
+                <a href="#museum" class="icon" title="bar">
+                    <i class="fas fa-landmark"></i>
+                </a>
+                <a href="#park" class="icon" title="cafe">
+                    <i class="fas fa-tree"></i>
+                </a>
+            </div>
+            <div class="column">
+                <a href="#gym" class="icon" title="restaurants">
+                    <i class="fas fa-dumbbell"></i>
+                </a>
+                <a href="zoo" class="icon" title="Restaurant">
+                    <i class="fas fa-hippo"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <img src="assets/images/sauna.webp" alt="Entretaiment" class="image">
+        <div class="overlay">
+            <div class="column">
+                <a href="#spa" class="icon" title="bar">
+                    <i class="fas fa-hot-tub"></i>
+                </a>
+                <a href="#hair_care" class="icon" title="cafe">
+                    <i class="fas fa-cut"></i>
+                </a>
+            </div>
+            <div class="column">
+                <a href="#dentist" class="icon" title="restaurants">
+                    <i class="fas fa-tooth"></i>
+                </a>
+                <a href="#doctor" class="icon" title="Restaurant">
+                    <i class="fas fa-briefcase-medical"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <img src="assets/images/shop.webp" alt="Entretaiment" class="image">
+        <div class="overlay">
+            <div class="column">
+                <a href="#convenience_store" class="icon" title="bar">
+                    <i class="fas fa-shopping-cart"></i>
+                </a>
+                <a href="#department_store" class="icon" title="cafe">
+                    <i class="fas fa-tshirt"></i>
+                </a>
+            </div>
+            <div class="column">
+                <a href="#florist" class="icon" title="restaurants">
+                    <i class="fas fa-seedling"></i>
+                </a>
+                <a href="shopping_mall" class="icon" title="Restaurant">
+                    <i class="fas fa-store"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+</div>
+<!--End-Cards-->
+
+<!--Map-->
+<div class="map-size container-fluid">
+    <div class="row map-size">
+        <div class="col-md-8 small-map">
+            <div id="mapa"></div>
+        </div>
+        <div class="col-md-4">
+            <div id="panel">
+                <div class="row">
+                    <img id="photo" alt="Place" class="mb-3">
+                </div>
+                <div class="row">
+                    <h1 id="name" class="mb-3 place"></h1>
+                </div>
+                <div class="row">
+                    <p id="rating" class="mb-3 leter-color-card"></p>
+                </div>
+                <div class="row">
+                    <p id="address" class="mb-3 leter-color-card "></p>
+                </div>
+                <div class="row" class="mb-3">
+                    <p>
+                        <a id="web"></a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--End-Map-->
+
+
+
+<!--Scripts-->
+<!--Jquery-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<!--Boostrap-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<!--GoogleMapsAPI-->
+<script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCJUR2IMmVgp5dtBHg9vUlbKPLSkRAq_fM&callback=initMap&libraries=places"></script>
+
+<!--MyScripts-->
+<script src="assets/js/mapa.js"></script>
+<!--End-Scripts-->
+
+</body>
+
+</html>
