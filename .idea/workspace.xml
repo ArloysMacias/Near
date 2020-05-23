@@ -4,6 +4,8 @@
     <list default="true" id="7404c15b-6f35-4327-8acc-64c80cb3528e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/map.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/mapa.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/mapa.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index2.html" beforeDir="false" afterPath="$PROJECT_DIR$/index2.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -52,8 +54,11 @@
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="JavaScript Debug.index.html">
+  <component name="RunManager" selected="JavaScript Debug.index2.html">
     <configuration name="exampleGoogleMaps.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/Near-master/exampleGoogleMaps.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="index2.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/Near/Near-master/index2.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
     <configuration name="index.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/Near-master/index.html" useBuiltInWebServerPort="true">
@@ -108,6 +113,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JavaScript Debug.index2.html" />
         <item itemvalue="JavaScript Debug.index.html" />
         <item itemvalue="JavaScript Debug.exampleGoogleMaps.html" />
       </list>
@@ -153,6 +159,31 @@
             <State>
               <option name="COLUMN_ORDER" />
             </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="origin/CreateInterfae" />
+                </option>
+              </RecentGroup>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="origin/AddFunctionalityToIcons" />
+                </option>
+              </RecentGroup>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="origin/DevelopTabletApproach" />
+                </option>
+              </RecentGroup>
+            </list>
           </value>
         </entry>
       </map>
@@ -295,10 +326,10 @@
       <screen x="1680" y="23" width="1920" height="1057" />
     </state>
     <state x="2128" y="133" key="SettingsEditor/1680.23.1920.1057/3600.23.1920.982/0.23.1680.1027@1680.23.1920.1057" timestamp="1589999832155" />
-    <state x="2414" y="271" key="git4idea.branch.GitSmartOperationDialog" timestamp="1590248108218">
+    <state x="2414" y="271" key="git4idea.branch.GitSmartOperationDialog" timestamp="1590250547781">
       <screen x="1680" y="23" width="1920" height="1057" />
     </state>
-    <state x="2414" y="271" key="git4idea.branch.GitSmartOperationDialog/1680.23.1920.1057/3600.23.1920.1057/0.23.1680.960@1680.23.1920.1057" timestamp="1590248108218" />
+    <state x="2414" y="271" key="git4idea.branch.GitSmartOperationDialog/1680.23.1920.1057/3600.23.1920.1057/0.23.1680.960@1680.23.1920.1057" timestamp="1590250547781" />
     <state x="2305" y="237" key="run.anything.popup" timestamp="1589926398658">
       <screen x="1680" y="23" width="1920" height="982" />
     </state>
