@@ -2,11 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7404c15b-6f35-4327-8acc-64c80cb3528e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/Near-master.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index2.html" beforeDir="false" afterPath="$PROJECT_DIR$/index2.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -14,6 +12,11 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1c3PcSaal84mQJBpB1tQjykXOLf" />
@@ -55,6 +58,53 @@
     </configuration>
     <configuration name="index.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/Near-master/index.html" useBuiltInWebServerPort="true">
       <method v="2" />
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType" factoryName="Kotlin">
+      <module name="Near-master" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="WORKING_DIRECTORY" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType" factoryName="Kotlin script">
+      <module name="Near-master" />
+      <option name="filePath" />
+      <option name="vmParameters" />
+      <option name="alternativeJrePath" />
+      <option name="programParameters" />
+      <option name="passParentEnvs" value="true" />
+      <option name="workingDirectory" />
+      <option name="isAlternativeJrePathEnabled" value="false" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="filePath" />
+      <option name="vmParameters" />
+      <option name="alternativeJrePath" />
+      <option name="programParameters" />
+      <option name="passParentEnvs" value="true" />
+      <option name="workingDirectory" />
+      <option name="isAlternativeJrePathEnabled" value="false" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="WORKING_DIRECTORY" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <recent_temporary>
       <list>
@@ -113,6 +163,10 @@
       <screen x="1680" y="23" width="1920" height="982" />
     </state>
     <state x="2405" y="324" key="#com.intellij.fileTypes.FileTypeChooser/1680.23.1920.982/3600.23.1920.1057/0.23.1680.1027@1680.23.1920.982" timestamp="1589916088663" />
+    <state x="2309" y="285" key="CommitChangelistDialog2" timestamp="1590248669917">
+      <screen x="1680" y="23" width="1920" height="1057" />
+    </state>
+    <state x="2309" y="285" key="CommitChangelistDialog2/1680.23.1920.1057/3600.23.1920.1057/0.23.1680.960@1680.23.1920.1057" timestamp="1590248669917" />
     <state width="1878" height="374" key="GridCell.Tab.0.bottom" timestamp="1589985382977">
       <screen x="1680" y="0" width="1920" height="1080" />
     </state>
@@ -241,6 +295,10 @@
       <screen x="1680" y="23" width="1920" height="1057" />
     </state>
     <state x="2128" y="133" key="SettingsEditor/1680.23.1920.1057/3600.23.1920.982/0.23.1680.1027@1680.23.1920.1057" timestamp="1589999832155" />
+    <state x="2414" y="271" key="git4idea.branch.GitSmartOperationDialog" timestamp="1590248108218">
+      <screen x="1680" y="23" width="1920" height="1057" />
+    </state>
+    <state x="2414" y="271" key="git4idea.branch.GitSmartOperationDialog/1680.23.1920.1057/3600.23.1920.1057/0.23.1680.960@1680.23.1920.1057" timestamp="1590248108218" />
     <state x="2305" y="237" key="run.anything.popup" timestamp="1589926398658">
       <screen x="1680" y="23" width="1920" height="982" />
     </state>
