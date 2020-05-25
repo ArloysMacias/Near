@@ -34,8 +34,8 @@ function initMap(id)
 
         var mapOptions = {
             center: myLatlng,
-            zoom: 12,
-            mapTypeId: google.maps.MapTypeId.ROAD
+            zoom: 10,
+            mapTypeId: google.maps.MapTypeId.HYBRID
         };
 
         map = new google.maps.Map(document.getElementById("mapa"),  mapOptions);
@@ -65,7 +65,7 @@ function markerById(id,myLatlng) {
     type=id;
     var request = {
         location: myLatlng,
-        radius: 11000,
+        radius: 15000,
         type
     };
     service.nearbySearch(request, function(results, status) {
@@ -77,32 +77,27 @@ function markerById(id,myLatlng) {
 //handler: TimerHandler, timeout?: number, ...arguments: any[]): number
 // Set markers at the location of each place result
 function createMarker(places) {
-
     for (var i = 0; i < places.length; i++) {
-        var marker = new google.maps.Marker({
-            position: places[i].geometry.location,
-            animation: google.maps.Animation.DROP,
-            map: map,
-            title: places[i].name
-        });
         clearMarkers();
-        addMarkerWithTimeout(places[i].position, i * 200);
-
-        addListenerToMarker(marker,places[i]);
-
+        addMarkerWithTimeout(places[i], i * 200);
         // Adjust the map bounds to include the location of this marker
         bounds.extend(places[i].geometry.location);
     }
 }
 
-function addMarkerWithTimeout(position, timeout) {
-    window.setTimeout(function() {
-        markers.push(new google.maps.Marker({
-            position: position,
-            map: map,
-            animation: google.maps.Animation.DROP
-        }));
-    }, timeout);
+function addMarkerWithTimeout(place, timeout) {
+
+    var marker = new google.maps.Marker({
+        position: place.geometry.location,
+        animation: google.maps.Animation.DROP,
+        map: map,
+        title: place.name
+    });
+
+    window.setTimeout(function() {markers.push(marker);}, timeout);
+
+    addListenerToMarker(marker,place);
+
 }
 function clearMarkers() {
     for (var i = 0; i < markers.length; i++) {
@@ -175,7 +170,7 @@ function fillPanel(placeResult,firstPhoto,rat,websiteUrl,add,name){
             document.getElementById('rating').innerHTML= `Rating: ${rat} ${ratingHtml} `;
         }
     } else {
-        document.getElementById('rating-row').style.display = 'none';
+        document.getElementById('rating').style.display = 'none';
     }
     if(add){
         document.getElementById("address").textContent=`Address: ${add}`;

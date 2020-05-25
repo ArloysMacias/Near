@@ -14,13 +14,13 @@ html{
     height: 100%;
 }
 
-.map-size{
+.map-container{
     height: 100%;
 }
 
 
 /*--------Cards-----*/
-.container {
+.panel-container {
     position: relative;
     width: 100%;
     max-width: 400px;
@@ -62,7 +62,7 @@ html{
     align-items:center;
 }
 
-.container:hover .overlay {
+.panel-container:hover .overlay {
     opacity: 1;
 }
 
@@ -173,7 +173,7 @@ a {
 
 /* Mobile */
 @media (min-width: 768px){
-        .container {
+        .panel-container {
             max-width: 260px;
         }
     }

@@ -1,69 +1,27 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:100,200,300,400,500,600,700|Exo:100,200,300,400,500,600,700');
 
 /* Size for make the map appear */
-body {
-    height: 100%;
+body{
     margin: 0;
     padding: 0;
 }
-html{
-    height: 100%;
-}
-
-/*Header*/
-.header {
-    text-align: center;
-    padding: 32px;
-}
-/*End-Header*/
-
-/*Icons*/
-.icon {
-    color: grey;
-    font-size: 420%;
-    position: relative;
-    text-align: center;
-}
-.fas:hover {
-    color: #ea4335;
-}
-td{
-    text-align: center;
-}
-/*End-Icons*/
-
-/*Map*/
-.map-size{
-    height: 100%;
-}
-div #mapa {
-    height: 100%;
-}
-/*End-Map*/
-
-/*Panel*/
-#panel {
-    height: 100%;
-    width: 100%;
-    background-color: white;
-    transition: all .2s ease-out;
-}
-
-/*Photo*/
-#photo {
-    position: relative;
-    min-height: 314px;
-    width: 100%;
-    height: auto;
-    max-height: 411px;
-    display: block;
-}
-/*End-Photo*/
 
 
-/*Letters*/
+/******************** Letters ***************/
+
 h1, p {
     font-family: 'open sans', arial, sans-serif;
+}
+
+
+/******************** COLORS ***************/
+
+body{
+    background: #28a7455c;
+}
+
+.icon {
+    color: #e2ad29;
 }
 
 p {
@@ -74,24 +32,108 @@ a {
     color: #3e78a0;
 }
 
+/******************** Hover ***************/
+.fas:hover {
+    color: #ea4335;
+}
+
+/******************** Sizes ***************/
+
+div #mapa {
+    margin-top: 0;
+    height: 100%;
+    min-height: 555px;
+}
+
+.icon {
+    font-size: 200%;
+}
+
+html{
+    height: 100%;
+}
+
+body {
+    height: 100%;
+}
+
+#photo {
+    min-height: 314px;
+    width: 100%;
+    height: auto;
+    max-height: 411px;
+}
+
+/******************** Align and Pading ***************/
+td,.title,.icon, .panel-container{
+    text-align: center;
+}
+
+.title {
+    padding: 32px;
+}
+
+
+/******************** Position and Display ***************/
+
+.icon{
+    position: relative;
+}
 .web-container{
     display: inline-block;
 }
+
 text{
     display: inline-block;
     justify-content: normal;
 }
-/*End-Letters*/
 
-/*End-Panel*/
+#photo{
+    display: block;
+    position: relative;
+}
 
 
+
+/******************** Containers ***************/
+.map-container{
+    position: relative;
+    text-align: center;
+    height: 100px;
+}
+
+#map{
+    height: 100px;
+}
+
+#icon-container{
+    background: #3e38386b;
+    margin-left: 10px;
+    z-index: 5;
+    position: absolute;
+    margin-top: 96px;
+    left: 0px;
+    top: 0px;
+}
+
+.panel-element-container{
+    position: absolute;
+    width: 100%;
+    justify-content: center;
+}
+.panel-container{
+    text-align: center;
+}
+#photo, #name, #rating, #address, #web{
+    text-align: center;
+}
 
 /* Responsive layout - makes a two column-layout instead of four columns */
 @media screen and (max-width: 800px) {
     .small-map{
         height: 50%;
     }
+
     .column {
         -ms-flex: 50%;
         flex: 50%;

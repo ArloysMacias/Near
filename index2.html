@@ -19,50 +19,56 @@
     <!--My styles-->
     <link rel="stylesheet" href="assets/css/style2.css" type="text/css">
 </head>
-<body>
-<div class="container-fluid map-size">
-    <!-- Header -->
-    <div class="header">
-        <h1>Near</h1>
-        <p>What do you want to do</p>
-    </div>
-    <!-- End-Header -->
 
+<body>
+
+
+
+<!-- Header -->
+<div class="title">
+    <h1>Near</h1>
+    <p>What do you want to do</p>
+</div>
+<!-- End-Header -->
+
+<!-- Map-Panel-->
+<div class="map-container">
     <!--Icons-->
-    <div class="container-fluid">
+    <div id="icon-container" class="d-sm-none d-md-none d-lg-none d-xl-none">
         <table>
             <tbody>
             <tr>
                 <td id="#bar" onclick="initMap('bar')"><a href="#" class="icon" title="bar">
                     <i class="fas fa-glass-martini-alt"></i>
                 </a></td>
-
+            </tr>
+            <tr>
                 <td id="#cafe" onclick="initMap('cafe')"><a href="#" class="icon" title="cafe">
                     <i class="fas fa-coffee"></i>
                 </a></td>
-
-                <td id="#restaurant" onclick="initMap('restaurant')"><a href="#" class="icon" title="restaurants">
-                    <i class="fas fa-utensils"></i>
-                </a></td>
-                <td id="night_club" onclick="initMap('night_club')"><a href="#" class="icon" title="Restaurant">
-                    <i class="fas fa-music"></i>
+            </tr>
+            <td id="#restaurant" onclick="initMap('restaurant')"><a href="#" class="icon" title="restaurants">
+                <i class="fas fa-utensils"></i>
+            </a></td>
+            <tr>
+                <td id="zoo" onclick="initMap('zoo')"><a href="" class="icon" title="Restaurant">
+                    <i class="fas fa-hippo"></i>
                 </a></td>
             </tr>
+            <td id="museum" onclick="initMap('museum')"><a href="#" class="icon" title="bar">
+                <i class="fas fa-landmark"></i>
+            </a></td>
             <tr>
-                <td id="museum" onclick="initMap('museum')"><a href="#" class="icon" title="bar">
-                    <i class="fas fa-landmark"></i>
-                </a></td>
-
                 <td id="park" onclick="initMap('park')"><a href="#" class="icon" title="cafe">
                     <i class="fas fa-tree"></i>
                 </a></td>
-
-                <td id="gym" onclick="initMap('gym')"><a href="#" class="icon" title="restaurants">
-                    <i class="fas fa-dumbbell"></i>
-                </a></td>
-
-                <td id="zoo" onclick="initMap('zoo')"><a href="" class="icon" title="Restaurant">
-                    <i class="fas fa-hippo"></i>
+            </tr>
+            <td id="gym" onclick="initMap('gym')"><a href="#" class="icon" title="restaurants">
+                <i class="fas fa-dumbbell"></i>
+            </a></td>
+            <tr>
+                <td id="night_club" onclick="initMap('night_club')"><a href="#" class="icon" title="Restaurant">
+                    <i class="fas fa-music"></i>
                 </a></td>
             </tr>
             </tbody>
@@ -70,48 +76,131 @@
     </div>
     <!--End-Icons-->
 
-    <!--Map--Panel-->
-    <div class="container-fluid map-size">
-        <div class="row map-size">
-            <!--Map-->
-            <div class="col-md-8 small-map">
-                <div id="mapa"></div>
+    <!--Map-->
+    <div>
+        <div id="mapa" ></div>
+    </div>
+    <!--End-Map-->
+
+    <!--Panel-->
+    <div class="panel-container">
+        <!--Photo-->
+        <img id="photo" class="mt-3 mb-3" style="visibility: hidden">
+        <div class="panel-element-container">
+            <!--Name-->
+                <h1 id="name" class="mb-3 place"></h1>
+            <!--Rating-->
+                <p id="rating" class="mb-3"></p>
+            <!--Address-->
+                <p id="address" class="mb-3"></p>
+            <!--Web address-->
+            <div class="mb-3 web-container" style="visibility: hidden">
+                <a id="web" class="btn btn-primary" role="button" target="_blank" >Web</a>
             </div>
-            <!--End-Map-->
-
-            <!--Panel-->
-            <div class="col-md-4">
-                <div id="panel">
-                    <!--Photo-->
-                    <img id="photo" class="mt-3 mb-3" style="visibility: hidden">
-
-                    <div class="container">
-                        <!--Name-->
-                        <div class="row">
-                            <h1 id="name" class="mb-3 place"></h1>
-                        </div>
-                        <!--Rating-->
-                        <div class="row">
-                            <p id="rating" class="mb-3"></p>
-                        </div>
-                        <!--Address-->
-                        <div class="row">
-                            <p id="address" class="mb-3"></p>
-                        </div>
-                        <!--Web address-->
-                        <div class="row" class="mb-3 web-container" style="visibility: hidden">
-                            <a id="web" class="btn btn-primary" role="button" target="_blank" >Web</a>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-            <!--End-Panel-->
-
         </div>
     </div>
-    <!--End-Map--Panel-->
+    <!--End-Panel-->
 </div>
+<!--End- Map-Panel-->
+
+
+<!--Cards-->
+<div class="row d-none d-xl-block d-md-block">
+
+    <div class="panel-container">
+        <img src="assets/images/party.webp" alt="Entretaiment" class="image">
+        <div class="overlay">
+            <div class="column">
+                <a href="#bar" class="icon" title="bar">
+                    <i class="fas fa-glass-martini-alt"></i>
+                </a>
+                <a href="#cafe" class="icon" title="cafe">
+                    <i class="fas fa-coffee"></i>
+                </a>
+            </div>
+            <div class="column">
+                <a href="#restaurant" class="icon" title="restaurants">
+                    <i class="fas fa-utensils"></i>
+                </a>
+                <a href="#" class="icon" title="Restaurant">
+                    <i class="fas fa-music"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="panel-container">
+        <img src="assets/images/walk.jpg" alt="Entretaiment" class="image">
+        <div class="overlay">
+            <div class="column">
+                <a href="#museum" class="icon" title="bar">
+                    <i class="fas fa-landmark"></i>
+                </a>
+                <a href="#park" class="icon" title="cafe">
+                    <i class="fas fa-tree"></i>
+                </a>
+            </div>
+            <div class="column">
+                <a href="#gym" class="icon" title="restaurants">
+                    <i class="fas fa-dumbbell"></i>
+                </a>
+                <a href="zoo" class="icon" title="Restaurant">
+                    <i class="fas fa-hippo"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="panel-container">
+        <img src="assets/images/sauna.webp" alt="Entretaiment" class="image">
+        <div class="overlay">
+            <div class="column">
+                <a href="#spa" class="icon" title="bar">
+                    <i class="fas fa-hot-tub"></i>
+                </a>
+                <a href="#hair_care" class="icon" title="cafe">
+                    <i class="fas fa-cut"></i>
+                </a>
+            </div>
+            <div class="column">
+                <a href="#dentist" class="icon" title="restaurants">
+                    <i class="fas fa-tooth"></i>
+                </a>
+                <a href="#doctor" class="icon" title="Restaurant">
+                    <i class="fas fa-briefcase-medical"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="panel-container">
+        <img src="assets/images/shop.webp" alt="Entretaiment" class="image">
+        <div class="overlay">
+            <div class="column">
+                <a href="#convenience_store" class="icon" title="bar">
+                    <i class="fas fa-shopping-cart"></i>
+                </a>
+                <a href="#department_store" class="icon" title="cafe">
+                    <i class="fas fa-tshirt"></i>
+                </a>
+            </div>
+            <div class="column">
+                <a href="#florist" class="icon" title="restaurants">
+                    <i class="fas fa-seedling"></i>
+                </a>
+                <a href="shopping_mall" class="icon" title="Restaurant">
+                    <i class="fas fa-store"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+</div>
+<!--End-Cards-->
+
+
+
+
 
 <!--Scripts-->
 <!--Jquery-->
@@ -124,7 +213,7 @@
 <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCJUR2IMmVgp5dtBHg9vUlbKPLSkRAq_fM&callback=initMap&libraries=places"></script>
 
 <!--MyScripts-->
-<script src="assets/js/mapa.js"></script>
+<script src="assets/js/mapa2.js"></script>
 <!--End-Scripts-->
 
 </body>
