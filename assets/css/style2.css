@@ -128,41 +128,87 @@ text{
     text-align: center;
 }
 
-/* Responsive layout - makes a two column-layout instead of four columns */
-@media screen and (max-width: 800px) {
-    .small-map{
-        height: 50%;
-    }
-
-    .column {
-        -ms-flex: 50%;
-        flex: 50%;
-        max-width: 50%;
-    }
+.card-container{
+    position: relative;
 }
 
-/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 600px) {
-    .small-map{
-        height: 50%;
-    }
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    opacity: 0;
+    transition: .3s ease;
+    background-color: #000000b8;
 
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    justify-content: center;
+    align-items:center;
+}
+
+
+.card-container:hover .overlay {
+    opacity: 1;
+}
+.image {
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+
+/******************** Responsive layout ***************/
+
+/* Mobile */
+@media (min-width: 768px){
     .column {
         -ms-flex: 100%;
-        flex: 100%;
         max-width: 100%;
     }
 }
 
-/* Mobile */
-@media (min-width: 768px){
-    .small-map{
-
-    }
-}
 /*Tablets*/
 @media (min-width: 1024px){
-
+    .image {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+    .column {
+        -ms-flex: 25%; /* IE10 */
+        flex: 25%;
+        max-width: 25%;
+        padding: 0 4px;
+    }
+    .icon{
+        font-size: 270%;
+    }
 }
+
 /*Wide Screen*/
-@media (min-width: 1200px) { }
+@media (min-width: 1200px) {
+    .image {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+    .panel-container:hover .overlay {
+        opacity: 1;
+    }
+    .column {
+        -ms-flex: 25%; /* IE10 */
+        flex: 25%;
+        max-width: 25%;
+        padding: 0 4px;
+    }
+    .icon{
+        font-size: 350%;
+    }
+}
