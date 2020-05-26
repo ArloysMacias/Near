@@ -109,7 +109,7 @@ function clearMarkers() {
 
 // Add click listener to each marker
 function addListenerToMarker(marker,place){
-    google.maps.event.addListener(marker, 'click', () => {
+    google.maps.event.addListener(marker, 'click', function() {
         var request = {
             placeId: place.place_id,
             fields: ['name', 'formatted_address', 'rating',
@@ -125,6 +125,8 @@ function addListenerToMarker(marker,place){
         } else {
             marker.setAnimation(google.maps.Animation.BOUNCE);
         }
+
+        window.location.href = "#panel";
 
     });
 
