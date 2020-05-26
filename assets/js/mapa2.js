@@ -84,7 +84,7 @@ function createMarker(places) {
         bounds.extend(places[i].geometry.location);
     }
 }
-
+//Add animation to the marker
 function addMarkerWithTimeout(place, timeout) {
 
     var marker = new google.maps.Marker({
@@ -119,7 +119,7 @@ function addListenerToMarker(marker,place){
             showDetails(placeResult, marker, status)
         });
 
-        //Make the marker jump when is clicked
+        //Make the marker jump when it is clicked
         if (marker.getAnimation() !== null) {
             marker.setAnimation(null);
         } else {

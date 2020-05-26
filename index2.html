@@ -21,17 +21,20 @@
 </head>
 
 <body>
-<div class="dark_fond">
-    <!-- Header -->
+
+<!-- Header -->
+<header class="dark_fond">
     <div class="title">
         <h1>Near</h1>
         <p>What do you want to do</p>
     </div>
-    <!-- End-Header -->
+</header>
+<!-- End-Header -->
 
-    <!--Cards width Icons only in tablets and wide screen-->
+
+<!--CARDS width Icons *** ONLY TABLET *** and wide screen-->
+<section>
     <div class="d-none d-xl-block d-md-block">
-
         <div class="row mb-3">
             <div class="col-md-3">
                 <div class="card-container">
@@ -129,101 +132,113 @@
                 </div>
             </div>
         </div>
-        <!--Cards width Icons only in tablets and wide screen-->
-
     </div>
-    <!--End-Laterals Icons Only Mobile view-->
+</section>
+<!--End-CARDS width Icons *** ONLY TABLET *** and wide screen-->
 
-    <!-- Map-Panel-Cards With Laterals Icons-Only Mobile View-->
-    <div class="map-container">
 
-        <!--Laterals Icons-Only Mobile View-->
-        <div id="icon-container" class="d-sm-none d-lg-none d-xl-none">
-            <table>
-                <tbody>
-                <tr>
-                    <td id="#bar" onclick="initMap('bar')"><a href="#" class="icon" title="bar">
-                        <i class="fas fa-glass-martini-alt"></i>
-                    </a></td>
-                </tr>
-                <tr>
-                    <td id="#cafe" onclick="initMap('cafe')"><a href="#" class="icon" title="cafe">
-                        <i class="fas fa-coffee"></i>
-                    </a></td>
-                </tr>
-                <td id="#restaurant" onclick="initMap('restaurant')"><a href="#" class="icon" title="restaurants">
-                    <i class="fas fa-utensils"></i>
-                </a></td>
-                <tr>
-                    <td id="zoo" onclick="initMap('zoo')"><a href="" class="icon" title="Restaurant">
-                        <i class="fas fa-hippo"></i>
-                    </a></td>
-                </tr>
-                <td id="museum" onclick="initMap('museum')"><a href="#" class="icon" title="bar">
-                    <i class="fas fa-landmark"></i>
-                </a></td>
-                <tr>
-                    <td id="park" onclick="initMap('park')"><a href="#" class="icon" title="cafe">
-                        <i class="fas fa-tree"></i>
-                    </a></td>
-                </tr>
-                <td id="gym" onclick="initMap('gym')"><a href="#" class="icon" title="restaurants">
-                    <i class="fas fa-dumbbell"></i>
-                </a></td>
-                <tr>
-                    <td id="night_club" onclick="initMap('night_club')"><a href="#" class="icon" title="Restaurant">
-                        <i class="fas fa-music"></i>
-                    </a></td>
-                </tr>
-                </tbody>
-            </table>
-        </div>
-        <!--End-Laterals Icons-Only Mobile View-->
-
-        <!--Map-->
-        <div>
+<!--Content Map Panel Icons-Only Mobile View-->
+<section id="map-panel-icons">
+    <div class="row">
+        <!--Map-And Laterals Icons-Only Mobile View-->
+        <div class="col-12 col-md-8 pr-0 pl-0" style="height: 100%;text-align: center">
+            <!--Map-->
             <div id="mapa" ></div>
+            <!--End-Map-->
+
+            <!--Laterals Icons-Only Mobile View-->
+            <div id="icon-container" class="d-lg-none d-xl-none">
+                <table>
+                    <tbody>
+                    <tr>
+                        <td id="#bar" onclick="initMap('bar')"><a href="#" class="icon" title="bar">
+                            <i class="fas fa-glass-martini-alt"></i>
+                        </a></td>
+                    </tr>
+                    <tr>
+                        <td id="#cafe" onclick="initMap('cafe')"><a href="#" class="icon" title="cafe">
+                            <i class="fas fa-coffee"></i>
+                        </a></td>
+                    </tr>
+                    <td id="#restaurant" onclick="initMap('restaurant')"><a href="#" class="icon" title="restaurants">
+                        <i class="fas fa-utensils"></i>
+                    </a></td>
+                    <tr>
+                        <td id="zoo" onclick="initMap('zoo')"><a href="" class="icon" title="Restaurant">
+                            <i class="fas fa-hippo"></i>
+                        </a></td>
+                    </tr>
+                    <td id="museum" onclick="initMap('museum')"><a href="#" class="icon" title="bar">
+                        <i class="fas fa-landmark"></i>
+                    </a></td>
+                    <tr>
+                        <td id="park" onclick="initMap('park')"><a href="#" class="icon" title="cafe">
+                            <i class="fas fa-tree"></i>
+                        </a></td>
+                    </tr>
+                    <td id="gym" onclick="initMap('gym')"><a href="#" class="icon" title="restaurants">
+                        <i class="fas fa-dumbbell"></i>
+                    </a></td>
+                    <tr>
+                        <td id="night_club" onclick="initMap('night_club')"><a href="#" class="icon" title="Restaurant">
+                            <i class="fas fa-music"></i>
+                        </a></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <!--End-Laterals Icons-Only Mobile View-->
         </div>
-        <!--End-Map-->
+        <!--End Map-And Laterals Icons-Only Mobile View-->
 
         <!--Panel-->
-        <div class="panel-container">
-            <!--Photo-->
-            <img id="photo" class="mb-3" style="visibility: hidden">
-            <div class="panel-element-container">
-                <!--Name-->
-                <h1 id="name" class="mb-3 place"></h1>
-                <!--Rating-->
-                <p id="rating" class="mb-3"></p>
-                <!--Address-->
-                <p id="address" class="mb-3"></p>
-                <!--Web address-->
-                <div class="mb-3 web-container" style="visibility: hidden">
-                    <a id="web" class="btn btn-primary" role="button" target="_blank" >Web</a>
+        <div class="col-12 col-md-4 pr-1 pl-1">
+            <div class="panel-container">
+                <!--Photo-->
+                <img id="photo" class="mb-3" style="visibility: hidden">
+                <div class="panel-element-container">
+                    <!--Name-->
+                    <h1 id="name" class="mb-3 place"></h1>
+                    <!--Rating-->
+                    <p id="rating" class="mb-3"></p>
+                    <!--Address-->
+                    <p id="address" class="mb-3"></p>
+                    <!--Web address-->
+                    <div class="mb-3 web-container" style="visibility: hidden">
+                        <a id="web" class="btn btn-primary" role="button" target="_blank" >Web</a>
+                    </div>
                 </div>
             </div>
         </div>
         <!--End-Panel-->
-
-
     </div>
-    <!--End Map-Panel-Cards With Laterals Icons-Only Mobile View-->
+</section>
+<!--End-Content Map Panel Icons-Only Mobile View-->
 
-</div>
+<!-- Copyright -->
+<footer id="footer">
+    <div class="footer-copyright text-center py-3">© 2020 Arloys Macias Rojas | All Rights Reserved
+    </div>
+</footer>
+<!--End-Copyright -->
 
 
 <!--Scripts-->
+
 <!--Jquery-->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
 <!--Boostrap-->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
 <!--GoogleMapsAPI-->
 <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
 <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCJUR2IMmVgp5dtBHg9vUlbKPLSkRAq_fM&callback=initMap&libraries=places"></script>
 
 <!--MyScripts-->
 <script src="assets/js/mapa2.js"></script>
+
 <!--End-Scripts-->
 
 </body>
