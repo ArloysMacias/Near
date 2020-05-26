@@ -11,8 +11,8 @@ var locations = [{
     lat: 59.4182144,
     lng: 17.9372032
 }, {
-    lat: 41.084045,
-    lng: -73.874256
+    lat: 21.5217571,
+    lng: -77.7811661
 }];
 
 function initMap(id)

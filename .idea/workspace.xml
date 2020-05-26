@@ -3,9 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="7404c15b-6f35-4327-8acc-64c80cb3528e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/css/style2.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/style2.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/mapa.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/mapa.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/mapa2.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/mapa2.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index2.html" beforeDir="false" afterPath="$PROJECT_DIR$/index2.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -203,6 +202,10 @@
       <screen x="1680" y="23" width="1920" height="982" />
     </state>
     <state x="2405" y="324" key="#com.intellij.fileTypes.FileTypeChooser/1680.23.1920.982/3600.23.1920.1057/0.23.1680.1027@1680.23.1920.982" timestamp="1589916088663" />
+    <state x="2378" y="305" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1590490757331">
+      <screen x="1680" y="23" width="1920" height="1057" />
+    </state>
+    <state x="2378" y="305" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/1680.23.1920.1057/3600.23.1920.1057/0.23.1680.958@1680.23.1920.1057" timestamp="1590490757331" />
     <state x="2309" y="285" key="CommitChangelistDialog2" timestamp="1590248669917">
       <screen x="1680" y="23" width="1920" height="1057" />
     </state>
