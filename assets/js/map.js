@@ -50,9 +50,8 @@ function initMap(id) {
             //Letters that will have the markers
             var labels = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
             //First marker with current position
+            locations.unshift(pos);
             markers = locations.map(function (location, i) {
-                console.log(i);
-                console.log(labels[i % labels.length]);
                 return new google.maps.Marker({
                     position: myLatlng,
                     label: labels[i % labels.length]
@@ -64,29 +63,31 @@ function initMap(id) {
             markerById(id, myLatlng);
 
 
-        }, function () {
-            // Browser supports geolocation, but user has denied permission
-            handleLocationError(true, infoWindow);
-        });
-    } else {
-        // Browser doesn't support geolocation
-        handleLocationError(false, infoWindow);
+        }, function(objPositionError)
+            {
+                switch (objPositionError.code)
+                {
+                    case objPositionError.PERMISSION_DENIED:
+                        alert("Access to the user's position has not been allowed.");
+                        break;
+                    case objPositionError.POSITION_UNAVAILABLE:
+                        alert("Your position information could not be accessed.");
+                        break;
+                    case objPositionError.TIMEOUT:
+                        alert("The service has taken too long to respond.");
+                        break;
+                    default:
+                        alert("Unknown error.");
+                }
+            }, {
+                maximumAge: 75000,
+                timeout: 15000
+            });
     }
-}
-
-// Handle a geolocation error
-function handleLocationError(browserHasGeolocation, infoWindow) {
-    // Set default location to Cuba
-    pos = { lat: 21.5513258 , lng: -79.6017351 };
-    map = new google.maps.Map(document.getElementById('map'), {
-        center: pos,
-        zoom: 15
-    });
-
-    // Display an InfoWindow at the map center
-    infoWindow.setPosition(pos);
-    infoWindow.setContent(browserHasGeolocation ? 'Geolocation permissions denied. Using default location.' : 'Error: Your browser doesn\'t support geolocation.');
-    infoWindow.open(map);
+    else
+    {
+        alert("Your browser does not support the geolocation API.");
+    }
 }
 
 
