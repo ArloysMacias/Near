@@ -1,45 +1,74 @@
 
 describe("mapModule", function(){
 
-    var mm, $canvas;
+    /*var geocoder = new google.maps.Geocoder();
+    geocoder.geocode({ 'address': '1600 Amphitheatre Parkway, Mountain View, CA 94043' }, function(results) {
+        // address results of Google HQ
+    });*/
 
-    beforeEach(function(){
-        $canvas = $('<div>').attr("id", "map-canvas");
-        $(document.body).append($canvas);
-        mm = mapModule("map-canvas");
+
+    beforeEach(function() {
+        var constructorSpy = spyOn(google.maps, 'Geocoder');
+        geocoder = jasmine.createSpyObj('Geocoder', ['geocode']);
+
+        constructorSpy.and.returnValue(geocoder);
+    });
+    it('returns an error if the data service returns no results', function(done) {
+
+        var location = 'some location value';
+
+        geocoder.geocode.and.callFake(function(request, callback) {
+            callback(results, google.maps.GeocoderStatus.OK);
+        });
+
+        // Act
+        var result = service.geocodeLocation(location);
+
+        // Assert
+        expect(geocoder.geocode).toHaveBeenCalled();
+
+        var lastCall = geocoder.geocode.calls.mostRecent();
+        var args = lastCall.args[0];
+        expect(args.address).toEqual(location);
+
+        result.then(function(returnedValue) {
+            expect(returnedValue).toEqual([results[0].geometry.location.lat(), results[0].geometry.location.lng()]);
+            done();
+        });
     });
 
-    afterEach(function(){
-        $canvas.remove();
-        $canvas = null;
-        mm = null;
-    })
+    function getRandomInRange(from, to, fixed) {
+        return parseFloat((Math.random() * (to - from) + from).toFixed(fixed));
+    }
 
-    it("should encompass all added markers", function(done){
-        var mapModule = mm;
+    var createResult = function(key) {
+        // Generate a random lat/lng value
+        var getRandomLatLng = function() {
+            return new google.maps.LatLng(
+                getRandomInRange(-180, 180, 7),
+                getRandomInRange(-180, 180, 7));
+        };
 
-        var idleListener = google.maps.event.addListener(mapModule.getMap(), 'idle', function() {
+        return {
+            address_components: [],
+            formatted_address: key + ' Some Street, Somewhere',
+            geometry: {
+                location: getRandomLatLng(),
+                bounds: new google.maps.LatLngBounds(
+                    getRandomLatLng(),
+                    getRandomLatLng()),
+                location_type: google.maps.GeocoderLocationType.ROOFTOP,
+                viewport: new google.maps.LatLngBounds(
+                    getRandomLatLng(),
+                    getRandomLatLng())
+            },
+            types: ['route']
+        }
+    };
 
-            idleListener.remove(); //don't fire again when bounds are updated
-            mapModule.addByLatLen([
-                {label:"My marker", lat: 40, len: 20},
-                {label:"My marker", lat: 42, len: 23},
-                {label:"My marker2", lat: 47, len: 19},
-                {label:"My marker3", lat: 59, len: 12}
-            ]);
-
-            google.maps.event.addListener(mapModule.getMap(), 'bounds_changed', function() {
-                console.log("bounds_changed", mapModule.getMap().getBounds().toString())
-                expect(typeof mapModule.getMap().getBounds()).toBe("object");
-                expect(isNaN(mapModule.getMap().getBounds().pa.j)).toBe(false);
-                expect(mapModule.getMap().getBounds().pa.j < 12).toBe(true);
-                expect(mapModule.getMap().getBounds().pa.k > 23).toBe(true);
-                expect(mapModule.getMap().getBounds().xa.j < 40).toBe(true);
-                expect(mapModule.getMap().getBounds().xa.k > 59).toBe(true);
-                done();
-            })
-
-            mapModule.updateBounds();
-        });
-    })
+    var resultCount = 10;
+    var results = [];
+    for (var i = 0; i < resultCount; i++) {
+        results.push(createResult(i));
+    }
 });

@@ -100,7 +100,6 @@ function initMap(id) {
     }
 }
 
-
 //Mark the map depending of the id
 function markerById(id,myLatlng) {
     type=id;
@@ -218,11 +217,35 @@ function fillPanel(placeResult,firstPhoto,rat,websiteUrl,add,name){
     if(add){
         document.getElementById("address").textContent=`Address: ${add}`;
     }
+    geocodeLocation(add); //Just for testing if it is taking the right address
     if (websiteUrl) {
         document.getElementById('web').style.visibility="visible";
         document.getElementById('web').href = websiteUrl;
     }
 }
+
+
+function geocodeLocation(location) {
+    var deferred = $.Deferred();
+    var geocoder = new google.maps.Geocoder();
+
+    geocoder.geocode({ 'address': location }, function(results, status) {
+        if (status === google.maps.GeocoderStatus.OK) {
+            if (results && results.length) {
+                var result = results[0];
+                var geometry = result.geometry.location;
+                deferred.resolve([geometry.lat(), geometry.lng()]);
+                return;
+            }
+        }
+
+        deferred.reject();
+    });
+
+    return deferred.promise();
+}
+
+
 
 
 //Remove the element from the html (DOM)
