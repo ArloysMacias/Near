@@ -5,63 +5,93 @@ var bounds;
 var infoPane;
 var service;
 var markers;
+let infoWindow;
 
 //Others positions
 var locations = [{
-    lat: 59.4182144,
-    lng: 17.9372032
+    lat: 23.113592 , lng: -82.366592  /*La Habana*/
 }, {
-    lat: 21.5217571,
-    lng: -77.7811661
+    lat: 23.151291 , lng: -81.260506  /*Varadero*/
 }];
 
-function initMap(id)
-{
+function initMap(id) {
     // Initialize variables
     bounds = new google.maps.LatLngBounds();
     infoPane = document.getElementById('panel');
-
-    // Create a map with current coordinates
-    navigator.geolocation.getCurrentPosition(function(position) {
-
-        pos = {
-            lat: position.coords.latitude,
-            lng: position.coords.longitude
-        };
-
-        //Current browser position
-        var myLatlng = new google.maps.LatLng(pos);
-
-        var mapOptions = {
-            center: myLatlng,
-            zoom: 10,
-            mapTypeId: google.maps.MapTypeId.HYBRID
-        };
-
-        map = new google.maps.Map(document.getElementById("mapa"),  mapOptions);
+    infoWindow = new google.maps.InfoWindow;
 
 
-        //Letters that will have the markers
-        var labels = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    if (navigator.geolocation) {
+        // Create a map with current coordinates
+        navigator.geolocation.getCurrentPosition(function (position) {
 
-        //First marker with current position
-        markers = locations.map(function(location, i) {
-            return new google.maps.Marker({
-                position: myLatlng,
-                label: labels[i % labels.length]
+            pos = {
+                lat: position.coords.latitude,
+                lng: position.coords.longitude
+            };
+
+            //Current browser position
+            var myLatlng = new google.maps.LatLng(pos);
+
+            var mapOptions = {
+                center: myLatlng,
+                zoom: 10,
+                mapTypeId: google.maps.MapTypeId.HYBRID
+            };
+
+            map = new google.maps.Map(document.getElementById("mapa"), mapOptions);
+
+            infoWindow.setPosition(pos);
+            infoWindow.setContent('You are here');
+            infoWindow.open(map);
+
+
+            //******Markers
+            //Letters that will have the markers
+            var labels = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+            //First marker with current position
+            markers = locations.map(function (location, i) {
+                console.log(i);
+                console.log(labels[i % labels.length]);
+                return new google.maps.Marker({
+                    position: myLatlng,
+                    label: labels[i % labels.length]
+                });
             });
+            //Create first marker
+            var markerCluster = new MarkerClusterer(map, markers, {imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'});
+            service = new google.maps.places.PlacesService(map);
+            markerById(id, myLatlng);
+
+
+        }, function () {
+            // Browser supports geolocation, but user has denied permission
+            handleLocationError(true, infoWindow);
         });
-        //Create first marker
-        var markerCluster = new MarkerClusterer(map, markers, {imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'});
-
-        service = new google.maps.places.PlacesService(map);
-
-        markerById(id,myLatlng);
-    });
+    } else {
+        // Browser doesn't support geolocation
+        handleLocationError(false, infoWindow);
+    }
 }
 
+// Handle a geolocation error
+function handleLocationError(browserHasGeolocation, infoWindow) {
+    // Set default location to Cuba
+    pos = { lat: 21.5513258 , lng: -79.6017351 };
+    map = new google.maps.Map(document.getElementById('map'), {
+        center: pos,
+        zoom: 15
+    });
+
+    // Display an InfoWindow at the map center
+    infoWindow.setPosition(pos);
+    infoWindow.setContent(browserHasGeolocation ? 'Geolocation permissions denied. Using default location.' : 'Error: Your browser doesn\'t support geolocation.');
+    infoWindow.open(map);
+}
+
+
+//Mark the map depending of the id
 function markerById(id,myLatlng) {
-//location, the radius and the type of places to obtain
     type=id;
     var request = {
         location: myLatlng,
@@ -74,7 +104,7 @@ function markerById(id,myLatlng) {
         }
     });
 }
-//handler: TimerHandler, timeout?: number, ...arguments: any[]): number
+
 // Set markers at the location of each place result
 function createMarker(places) {
     for (var i = 0; i < places.length; i++) {

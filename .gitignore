@@ -94,6 +94,10 @@ fabric.properties
 ### macOS ###
 # General
 .DS_Store
+assets/**/.DS_Store
+assets/.DS_Store
+*.DS_Store
+***.DS_Store
 .AppleDouble
 .LSOverride
 

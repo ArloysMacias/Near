@@ -4,7 +4,7 @@ describe("mapModule", function(){
     var mm, $canvas;
 
     beforeEach(function(){
-        $canvas = $('<div>').attr("id", "map-canvas");
+        $canvas = $('<div>').attr("id", "mapa");
         $(document.body).append($canvas);
         mm = mapModule("map-canvas");
     });
@@ -13,7 +13,7 @@ describe("mapModule", function(){
         $canvas.remove();
         $canvas = null;
         mm = null;
-    })
+    });
 
     it("should encompass all added markers", function(done){
         var mapModule = mm;
