@@ -45,8 +45,8 @@ function initMap(id) {
 
             var mapOptions = {
                 center: myLatlng,
-                zoom: 10,
-                mapTypeId: google.maps.MapTypeId.HYBRID
+                zoom: 12,
+                mapTypeId: google.maps.MapTypeId.ROADMAP
             };
 
             map = new google.maps.Map(document.getElementById("mapa"), mapOptions);
@@ -106,7 +106,7 @@ function markerById(id,myLatlng) {
     type=id;
     var request = {
         location: myLatlng,
-        radius: 15000,
+        radius: 5000,
         type
     };
     service.nearbySearch(request, function(results, status) {

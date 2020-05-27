@@ -24,7 +24,7 @@ body{
 */
 
 .icon {
-    color: #e2ad29;
+    color: #f7f7f7;;
 }
 
 p {
@@ -116,13 +116,19 @@ text{
 }
 
 #icon-container{
-    background: #3e38386b;
-    margin-left: 23px;
+    background: #0000004d;
+    margin-left: 3px;
     z-index: 5;
     position: absolute;
     margin-top: 96px;
     left: 0px;
     top: 0px;
+    border: 1px none transparent;
+    border-radius: 40px 40px 40px 40px;
+    outline: 1px none transparent;
+    outline-offset: 0px;
+    -webkit-box-shadow: 1px 8px 16px 0px rgba(0,0,0,0.29);
+    box-shadow: 1px 8px 16px 0px rgba(0,0,0,0.29);
 }
 
 .panel-element-container{
