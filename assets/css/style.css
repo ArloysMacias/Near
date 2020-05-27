@@ -191,16 +191,10 @@ text{
 
 footer{
     color: rgb(202, 196, 196);
-    padding: 60px;
     background-color: #363636;
 }
 
-.footer-container{
-    color: rgb(202, 196, 196);
-    height: 100px;
-    background-color: #363636;
-    bottom: 0px;
-}
+
 
 /******************** Responsive layout ***************/
 

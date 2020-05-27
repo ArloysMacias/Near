@@ -1,4 +1,13 @@
-
+Mapa=function (pos,/*,map,bonus,infoPane,service,markers,infoWindow,*/locations) {
+    // this.pos=pos;
+    // this.map=map;
+    // this.bounds=bonus;
+    // this.infoPane=infoPane;
+    // this.service=service;
+    // this.markers=markers;
+    // this.infoWindow=infoWindow;
+    this.locations=locations;
+}
 var pos;
 var map;
 var bounds;
@@ -6,6 +15,7 @@ var infoPane;
 var service;
 var markers;
 let infoWindow;
+
 
 //Others positions
 var locations = [{

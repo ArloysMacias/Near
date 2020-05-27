@@ -1,45 +1,57 @@
+describe("Map", function(){
 
-describe("mapModule", function(){
+    var nav;
+    var options = {
+        enableHighAccuracy: true,
+        timeout: 5000,
+        maximumAge: 0
+    }
+    function success(pos) {
+        var crd = pos.coords;
+        console.log('Your current position is:');
+        console.log('Latitude : ' + crd.latitude);
+        console.log('Longitude: ' + crd.longitude);
+        console.log('More or less ' + crd.accuracy + ' meters.');
+    }
+    function error(err) {
+        alert("Your browser does not support the geolocation API.");
+    }
 
-    var mm, $canvas;
+    window.google = {
+        maps: {
+            places: {
+                Autocomplete: class {}
+            }
+        }
+    };
+
+    var map;
 
     beforeEach(function(){
-        $canvas = $('<div>').attr("id", "mapa");
-        $(document.body).append($canvas);
-        mm = mapModule("map-canvas");
+        map=new Map(pos,locations);
+        nav=navigator.geolocation;
     });
 
-    afterEach(function(){
-        $canvas.remove();
-        $canvas = null;
-        mm = null;
-    });
+    //nav.geolocation.getCurrentPosition(success, error, options);
 
-    it("should encompass all added markers", function(done){
-        var mapModule = mm;
-
-        var idleListener = google.maps.event.addListener(mapModule.getMap(), 'idle', function() {
-
-            idleListener.remove(); //don't fire again when bounds are updated
-            mapModule.addByLatLen([
-                {label:"My marker", lat: 40, len: 20},
-                {label:"My marker", lat: 42, len: 23},
-                {label:"My marker2", lat: 47, len: 19},
-                {label:"My marker3", lat: 59, len: 12}
-            ]);
-
-            google.maps.event.addListener(mapModule.getMap(), 'bounds_changed', function() {
-                console.log("bounds_changed", mapModule.getMap().getBounds().toString())
-                expect(typeof mapModule.getMap().getBounds()).toBe("object");
-                expect(isNaN(mapModule.getMap().getBounds().pa.j)).toBe(false);
-                expect(mapModule.getMap().getBounds().pa.j < 12).toBe(true);
-                expect(mapModule.getMap().getBounds().pa.k > 23).toBe(true);
-                expect(mapModule.getMap().getBounds().xa.j < 40).toBe(true);
-                expect(mapModule.getMap().getBounds().xa.k > 59).toBe(true);
-                done();
-            })
-
-            mapModule.updateBounds();
+    describe("Geolocation: getting actual position",function(){
+        it("Should show an alert if the positipn is empty", function() {
+            spyOn(window,"alert");
+            initMap('bar');
+            expect(window.alert).toHaveBeenCalledWith("Your browser does not support the geolocation API.");
         });
-    })
+
+
+    //     it("should return an error if we don't supply two function", function() {
+    //         spyOn(window,"alert")
+    //         nav.geolocation.getCurrentPosition(success, error, options);
+    //         expect(map.pos).toBe(Object);
+    //     });
+    //     it("should return an error if we don't supply two function", function() {
+    //         spyOn(window,"alert")
+    //         nav.geolocation.getCurrentPosition(null);
+    //         expect(window.alert).toHaveBeenCalled("Error!");
+    //     });
+     });
+
 });
