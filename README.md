@@ -52,7 +52,9 @@ For the design of the project I wanted to have a map as the main feature but I a
 
 ##### Final wireframes:
 
+[Mobile view](https://github.com/ArloysMacias/Near/blob/master/assets/images/moqups/moqups1.png)
 
+[Desktop and tablet view](https://github.com/ArloysMacias/Near/blob/master/assets/images/moqups/moqups2.png)
 
 #### Colors
 
