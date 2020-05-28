@@ -19,7 +19,6 @@ The site owner advances their own goals by providing this functionality, potenti
 
 ### Near
 
-
 The other day I was on my bike and I wanted to find a place to eat. I had to use my phone but didn't know where I wanted to go. I opened Google Maps and either had to know the name and write it or go through the many options provided. This takes time, requires many clicks, which can be frustrating and is not particularly safe to do while moving. So I decided that I would make my project an interactive map that is easy and fast to use. 
 
 #### GoogleMaps API
@@ -39,12 +38,12 @@ The Google API has a free tier. Once the service is connected you can limit the 
 
 ## UX
 
-### User stories:
+### User Stories:
 * As a user I want an easier and faster way to find the nearest basic places
 
 * As a user I want a user friendly platform 
 
-### Design and colors
+### Design and Colors
 
 #### Wireframes
 
@@ -60,7 +59,97 @@ For the design of the project I wanted to have a map as the main feature but I a
 
 The default map is very colorful and I wanted to keep the rest of the page clean with a white background. Originally, I had a white toned background image of plates but it looked too messy and I switched to the all white background. I chose a warm tone on the images which are appealing and easy on the eyes as well as fitting well with the map. The color of the icons are white with a dark transparent background to fit with both the satellite and road map view.
 
-
 #### Fonts
 
 For the font for Heading1`<h1>` and the paragraphs`<p>` I used Open Sans, from Google Fonts. This font works well with the design as it is modern and simple. *"Open Sans was designed with an upright stress, open forms and a neutral, yet friendly appearance. It was optimized for print, web, and mobile interfaces, and has excellent legibility characteristics in its letterforms"* [[Google Fonts, 2020]](https://fonts.google.com/specimen/Open+Sans).
+
+## Features
+
+### Existing Features
+
+* Header: Allows user to know the name of the project as well as understanding what it is.
+
+* Image cards: Allows user to see different categories to choose from.
+
+* Icons: Allows user to specify their preferred choice of location and show it on the map.
+
+* Map: Allows user to visualize their position and the nearest chosen places. 
+
+* Markers: Allows the user to fetch the information of one specific place and show it in a panel.
+
+* Panel: Allows user to visualize specific information sent by the marker (picture of the place ([if available](https://developers.google.com/places/web-service/photos?hl=es)), name, rating, address and website).
+
+* Footer: Allows the user to see copyright, date of project completion and author. 
+
+### Features Left to Implement
+
+Google Maps API has many more different types of places than the 16 that are displayed in this project. A future feature would be to give the user the option to customize the displayed basic 16 icons with the locations they prefer to have presented.
+
+## Technologies
+
+* [HTML5](https://html.spec.whatwg.org/multipage/)
+    * A markup language that it is used for structuring and presenting content. 
+* [CSS](https://www.w3.org/Style/CSS/)
+    * The language for describing the presentation of Web pages. The project uses it for including colors, layout, and fonts.
+* JavaScript
+    * Used to make web development easier and more attractive.
+* [Boostrap](https://getbootstrap.com/)
+    * A front-end helper with a free collection of tools that is used to design and customize a responsive layout to the project.
+* [JQuery](https://jquery.com/)
+    * The project uses JQuery to simplify DOM manipulation.
+* [IntelliJ IDEA](https://www.jetbrains.com/es-es/idea/)
+    * An integrated development environment (IDE) written in Java. It it is used for developing and coding. 
+* [Git](https://git-scm.com/doc)
+    * Used for tracking changes in the code during software development.
+* [GitHub](https://github.com/) 
+    * A Git repository hosting service which provides a Web-based graphical interface and is also used to trigger deployments.
+* [Font Awesome](https://fontawesome.com/) 
+    * The project uses it to get vector icons and social logos.
+* [Google Fonts](https://fonts.google.com/) 
+    * The project uses it to get elegant fonts without compromising users’ privacy or security.
+* [Moqups](https://moqups.com)
+    * A streamlined web app that was used to create the mockups.
+    
+## Testing
+
+* 
+
+*
+
+*
+
+*
+
+## Deployment
+
+The project was created with IntelliJ and the site is hosted by GitHub. Different branches were used, each one with various commits, named depending on their long-term purpose and changed characteristic respectively. Several pull requests were created once the branch's purpose was fulfilled. It was used the master branch which allows every change, commit and push to show immediately in real time to users.
+
+### Allowing GitHub to publish from your site
+
+* Find the [repository](https://github.com/ArloysMacias/Near) on GitHub.
+
+* Under the repository name click `Settings` 
+
+* Under GitHub pages section find and select `Master` in the drop-down menu
+
+* Click `Save
+
+### Cloning your repository to create local copy
+
+* Select the [Repository](https://github.com/ArloysMacias/Near)
+
+* Click on the 'Clone or Download' button
+
+* Copy the URL provided
+
+* Open terminal (Mac) / Open Git Bash (Windows) 
+
+* Find the directory you want to clone the repository to
+
+* Type `git clone` and paste the URL, press Enter
+
+* Your local clone has be created
+
+## Credits
+
+Thanks to my mentor who supported me and came with good ideas and thanks to my wife who put up with me during this time.
