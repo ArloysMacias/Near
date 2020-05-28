@@ -1,27 +1,18 @@
 
-describe("Calculator", function() {
+describe("mapModule", function(){
+    var map;
 
-    beforeEach(function() {
-        calc = new Calculator;
+    beforeEach(function () {
+        map =new Mapa();
+        map.getMyPosition();
+    });
+    describe('Geolocation', function () {
+
+        it ('Should show a success alert ', function(){
+            spyOn(map, 'getMyPosition');
+            spyOn(window, 'alert');
+            expect(window.alert).toHaveBeenCalledWith('Success your navegator has geolocation');
+        })
     });
 
-    describe("Addition function", function() {
-        it("should return 42", function() {
-            calc.add(20);
-            calc.add(22);
-            expect(calc.value).toBe(42);
-        });
-
-        it("should return 26", function() {
-            calc.add(7);
-            calc.add(19);
-            expect(calc.value).toBe(26);
-        });
-
-        it("should return an error if we don't supply two numbers", function() {
-            spyOn(window, "alert");
-            calc.add("Hitchhikers");
-            expect(window.alert).toHaveBeenCalledWith("Error!");
-        });
-    });
 });

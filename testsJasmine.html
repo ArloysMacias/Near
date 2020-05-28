@@ -9,11 +9,61 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jasmine/2.7.0/boot.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jasmine/2.7.0/jasmine.css">
 
-    <!-- Load scripts -->
-    <script type="text/javascript" src="assets/js/map.js"></script>
 
-    <!-- Load Tests -->
-    <script type="text/javascript" src="assets/spec/mapsSpec.js"></script>
+
+
+    <!--My styles-->
+    <link rel="stylesheet" href="assets/css/style.css" type="text/css">
 </head>
+
+<body>
+<section id="map-panel-icons" class="container">
+    <div class="row">
+        <!--Map-And Laterals Icons-Only Mobile View-->
+        <div class="col-12 col-md-8 pr-0 pl-0" style="height: 100%;text-align: center">
+            <!--Map-->
+            <div id="mapa" ></div>
+            <!--End-Map-->
+        </div>
+        <!--Panel-->
+        <div id="panel" class="col-12 col-md-4 pr-1 pl-1">
+            <div class="panel-container">
+                <!--Photo-->
+                <img id="photo" src="assets/images/playaparaiso_0.jpg" class="mb-3" >
+                <div class="panel-element-container">
+                    <!--Name-->
+                    <h3 id="name" class="mb-3 place">Varadero</h3>
+                    <!--Rating-->
+                    <p id="rating" class="mb-3">Rating: 5 <a>&#9733;</a>
+                        <a >&#9733;</a>
+                        <a >&#9733;</a>
+                        <a >&#9733;</a>
+                        <a >&#9733;</a></p>
+                    <!--Address-->
+                    <small id="address">5Q53+7Q Varadero, Cuba</small>
+                    <!--Web address-->
+                    <div class="mt-3 web-container" style="display: block">
+                        <a id="web" href="https://en.wikipedia.org/wiki/Varadero" class="btn btn-primary" role="button" target="_blank" >Web</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--End-Panel-->
+    </div>
+</section>
+
+<!--Load GoogleMapsAPI-->
+<script src="http://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
+<script async defer src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCJUR2IMmVgp5dtBHg9vUlbKPLSkRAq_fM&callback=jasmineFunction&libraries=places"></script>
+
+<!-- Load scripts -->
+<script type="text/javascript" src="assets/js/map.js"></script>
+
+<!-- Load Tests -->
+<script src="https://code.jquery.com/jquery-1.11.3.js"></script>
+<script type="text/javascript" src="assets/spec/mapsSpec.js"></script>
+
+</body>
+
 
 </html>
