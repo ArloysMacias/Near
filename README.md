@@ -2,7 +2,7 @@
 This is my 2nd milestone project with Code Institute and their Full Stack Web Developer course.
 
 ## Demo
-
+![Tablet View](assets/images/gifs/TabletView.gif) ![Mobile View](assets/images/gifs/MovileView.gif) 
 
 ## Summary 
 
