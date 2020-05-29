@@ -2,7 +2,7 @@
 This is my 2nd milestone project with Code Institute and their Full Stack Web Developer course.
 
 ## Demo
-![Tablet View](assets/images/gifs/TabletView.gif) ![Mobile View](assets/images/gifs/MovileView.gif) 
+<img src="assets/images/gifs/DesktopView.gif" width="70%" height="70%" /><img src="assets/images/gifs/MobileViewOriginal.gif" width="10%" height="10%" /><img src="assets/images/gifs/TabletView.gif" width="20%" height="20%" />
 
 ## Summary 
 
