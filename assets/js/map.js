@@ -101,7 +101,7 @@ function initMapAnyPosition(position,id) {
     map=new Mapa();
     map.createMap(position,'mapa');
 
-    infoWindow.setPosition(pos);
+    infoWindow.setPosition(position);
     infoWindow.setContent('You are here');
     infoWindow.open(map);
 
@@ -110,8 +110,8 @@ function initMapAnyPosition(position,id) {
     //Letters that will have the markers
     var labels = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
     //First marker with current position
-    locations.unshift(pos);
-    markers = locations.map(function (location, i) {
+    locations.unshift(position);
+    markers = locations.map(function (position, i) {
         return new google.maps.Marker({
             position: myLatlng,
             label: labels[i % labels.length]

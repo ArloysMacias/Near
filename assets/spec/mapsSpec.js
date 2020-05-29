@@ -1,64 +1,43 @@
 function jasmineFunction(){
-    describe("mapModule", function(){
 
+    describe("Create Marker", function(){
         var places;
         var request = {
             placeId: 'ChIJN1t_tDeuEmsRUsoyG83frY4',
             fields: ['name', 'rating', 'formatted_phone_number', 'geometry']
         };
-        var status=google.maps.places.PlacesServiceStatus.OK;
 
-        function callback(results, status){
-            request = {
-                placeId: 'ChIJN1t_tDeuEmsRUsoyG83frY4',
-                fields: ['name', 'formatted_address', 'rating',
-                    'website', 'photos']
-            };
-            status=google.maps.places.PlacesServiceStatus.OK;
-        }
-
-        var marker;
+        var map;
+        var testPosition;
+        var placeResult;
+        //La Havana
+        testPosition = {
+            lat: 23.113592,
+            lng: -82.366592
+        };
 
         beforeEach(function() {
-
-
+            map=new Mapa();
+            map.createMap(testPosition,'mapa');
 
             var constructorSpy = spyOn(google.maps.places, 'PlacesService');
             places = jasmine.createSpyObj('PlacesService', ['getDetails'])/*.withArgs(request,callback).and.returnValue(results)*/;
-
-            marker = new google.maps.Marker({
-                position: places[0].geometry.location,
-                animation: google.maps.Animation.DROP,
-                map: map,
-                title: places[0].name
-            });
-
-
             constructorSpy.and.returnValue(places);
         });
-
         it('returns an error if the data service returns no results', function(done) {
-
             places.getDetails.and.callFake(function (request,callback){
                 callback(results,status);
             });
-
-            results= [{
-                placeId: 'ChIJN1t_tDeuEmsRUsoyG83frY4',
-                fields: ['name', 'rating', 'formatted_phone_number', 'geometry']
-            },{
-                placeId: 'ChIJN1t_tDeuEmsRUsoyG83frY4',
-                fields: ['name', 'rating', 'formatted_phone_number', 'geometry']
-            }]
-
+            places.getDetails(request,function (result,status) {
+                status=google.maps.places.PlacesServiceStatus.OK;
+            });
             // Act initMap('bar');
-            addListenerToMarker(marker,places)
-
-            console.log(places.getDetails(request, callback));
-
-
+            map.initMapa('cafe');
+            //createMarker(places);
             // Assert
-            expect(places.getDetails(request, callback)).toHaveBeenCalled();
+            expect(places.getDetails(request,function (result,status) {
+                status=google.maps.places.PlacesServiceStatus.OK;
+            })).toHaveBeenCalled();
 
             var lastCall = places.getDetails(request, callback).calls.mostRecent();
             var args = lastCall.args[0];
@@ -70,7 +49,6 @@ function jasmineFunction(){
                 done();
             });
         });
-
 
         function getRandomInRange(from, to, fixed) {
             return parseFloat((Math.random() * (to - from) + from).toFixed(fixed));
@@ -107,5 +85,54 @@ function jasmineFunction(){
             results.push(createResult(i));
         }
     });
+
+
+    describe("Get my position", function(){
+        var map;
+        beforeEach(function () {
+            map =new Mapa();
+        });
+
+        describe('Geolocation', function () {
+            it ('Should show a success alert ', function(){
+                spyOn(map, 'getMyPosition');
+                spyOn(window, 'alert');
+                expect(window.alert).toHaveBeenCalledWith('Success your navegator has geolocation');
+            })
+        });
+
+    });
+
+    // $(document).ready(function(){
+    //     describe('Build Map', function () {
+    //         var map;
+    //         var testPosition;
+    //         var placeResult;
+    //         //La Havana
+    //         testPosition = {
+    //             lat: 23.113592,
+    //             lng: -82.366592
+    //         };
+    //         beforeEach(function () {
+    //             map=new Mapa();
+    //             map.createMap(testPosition,'mapa');
+    //         });
+    //         describe('Name of the Place', function () {
+    //             it ('Should return La Habana', function(){
+    //                 placeResult=map.findPlaces(testPosition,'bar');
+    //                 expect(placeResult.formatted_address).toBe("La Habana");
+    //             });
+    //         });
+    //         // alert("You need to click on the markers to initialize the test");
+    //         describe('Address Place', function () {
+    //             //Current browser position
+    //             var laceResult=map.initMapa('cafe');
+    //             it ('Should return La Habana', function(){
+    //
+    //                 expect(laceResult.formatted_address).toBe("La Habana");
+    //             });
+    //         });
+    //     })
+    // });
 }
 
