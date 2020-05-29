@@ -118,9 +118,30 @@ Google Maps API has many more different types of places than the 16 that are dis
 This site was tested with the inspection function of Chrome and Firefox and the featured mobile view that they provide (iphone 6, 7, 8 plus and ipad). No issues were detected during the testing. Neither were any issues found when tests were performed in devices with high contrast.
 
 I used [W3C Validator](https://validator.w3.org/) to check the markup validity of Web documents in HTML and CSS. Highlighted errors:
-* I used the same `id` in two different places
 
-I used [Esprima](https://esprima.org/demo/validate.html) Syntax Validator to check main.js, the code was syntactically valid.
+### CSS Validation
+Before:
+![cssTest](assets/images/tests/ValidatorW3/cssTest/before.png)
+
+After:
+![cssTest](assets/images/tests/ValidatorW3/cssTest/after.png)
+
+### HTML Validation
+Before:
+![htmlTest](assets/images/tests/ValidatorW3/htmlTest/before.png)
+
+After:
+![htmlTest](assets/images/tests/ValidatorW3/htmlTest/after.png)
+
+### JavaScrip
+
+I used [Esprima](https://esprima.org/demo/validate.html) Syntax Validator to check map.js and mapsSpec.js, the code was syntactically valid.
+
+map.js
+![Map](assets/images/tests/ValidatorW3/jsTest/map.png)
+
+mapsSpec.js:
+![mapsSpec](assets/images/tests/ValidatorW3/jsTest/mapsSpec.png)
 
 ### Functional tests
 
