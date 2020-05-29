@@ -282,16 +282,18 @@ function showDetails(placeResult, marker, status) {
 //Add the values of the api to a variable and call the function that fill the html
 function showPanel(placeResult){
     result=placeResult;
-
-    var firstPhoto;
-    var i=0;
-    while (i < placeResult.photos.length) {
-        if(placeResult.photos[i]){
-            firstPhoto = placeResult.photos[i];
-            break;
+    if (placeResult.photos){
+        var firstPhoto;
+        var i=0;
+        while (i < placeResult.photos.length) {
+            if(placeResult.photos[i]){
+                firstPhoto = placeResult.photos[i];
+                break;
+            }
+            i++;
         }
-        i++;
     }
+
 
     var name = placeResult.name;
     var rat = placeResult.rating;
