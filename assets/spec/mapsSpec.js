@@ -87,14 +87,15 @@ function jasmineFunction(){
     });
 
 
-    describe("Get my position", function(){
+    describe("Get position", function(){
         var map;
         beforeEach(function () {
             map =new Mapa();
         });
-
+        //Only created this describe because my browser support geolocation
         describe('Geolocation', function () {
             it ('Should show a success alert ', function(){
+                map.initMapa('bar');
                 spyOn(map, 'getMyPosition');
                 spyOn(window, 'alert');
                 expect(window.alert).toHaveBeenCalledWith('Success your navegator has geolocation');

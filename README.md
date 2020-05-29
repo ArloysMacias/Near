@@ -1,6 +1,9 @@
 # Near
 This is my 2nd milestone project with Code Institute and their Full Stack Web Developer course.
 
+## Demo
+
+
 ## Summary 
 
 ### Project purpose: Presentation of interacitve data
@@ -61,7 +64,7 @@ The default map is very colorful and I wanted to keep the rest of the page clean
 
 #### Fonts
 
-For the font for Heading1`<h1>` and the paragraphs`<p>` I used Open Sans, from Google Fonts. This font works well with the design as it is modern and simple. *"Open Sans was designed with an upright stress, open forms and a neutral, yet friendly appearance. It was optimized for print, web, and mobile interfaces, and has excellent legibility characteristics in its letterforms"* [[Google Fonts, 2020]](https://fonts.google.com/specimen/Open+Sans).
+For the font for Heading1`<h1>` and the paragraphs`<p>` I used Open Sans, from Google Fonts. This font works well with the design as it is modern and simple. > Open Sans was designed with an upright stress, open forms and a neutral, yet friendly appearance. It was optimized for print, web, and mobile interfaces, and has excellent legibility characteristics in its letterforms. - [[Google Fonts, 2020]](https://fonts.google.com/specimen/Open+Sans).
 
 ## Features
 
@@ -136,10 +139,15 @@ I used [Esprima](https://esprima.org/demo/validate.html) Syntax Validator to che
 
 ### Unit tests
 For unit tests the [Jasmine](https://jasmine.github.io/2.5/introduction) unit testing framework was used
-*
 
-*
+* For the 1st test I Mock out Google Maps Places API following with Jasmine Spies created by [Kevin Wilson](https://kwilson.io/blog/mock-out-google-maps-geocoder-with-jasmine-spies/)
+    [![Create Marker test](assets/images/tests/CreateMarker.png)](testsJasmineWithMap.html)
 
+
+* For the second test try to verify that the map was created correctly and this mainly depends on whether or not the browser used supports geolocation, so just showing an alert that the browser supports geolocation would be sufficient.
+  To do this I instantiated the constructor and called the function initMapa and `spyOn(window, 'alert');`
+    [![Create Marker test](assets/images/tests/GetPosition.png)](testsJasmineWithMap.html)
+    
 ## Deployment
 
 The project was created with IntelliJ and the site is hosted by GitHub. Different branches were used, each one with various commits, named depending on their long-term purpose and changed characteristic respectively. Several pull requests were created once the branch's purpose was fulfilled. It was used the master branch which allows every change, commit and push to show immediately in real time to users.
