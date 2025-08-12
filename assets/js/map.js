@@ -1,4 +1,3 @@
-
 var map;
 var bounds;
 var infoPane;
@@ -98,8 +97,8 @@ function initMapAnyPosition(position,id) {
     infoWindow = new google.maps.InfoWindow;
 
     //Create a map with the current browser position
-    map=new Mapa();
-    map.createMap(position,'mapa');
+    var mapaInstance = new Mapa();
+    mapaInstance.createMap(position,'mapa');
 
     infoWindow.setPosition(position);
     infoWindow.setContent('You are here');
@@ -118,7 +117,7 @@ function initMapAnyPosition(position,id) {
         });
     });
     //Create first marker in the actual position
-    var markerCluster = new MarkerClusterer(map, markers, {imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'});
+    const markerCluster = new markerClusterer.MarkerClusterer({map: map, markers: markers});
     service = new google.maps.places.PlacesService(map);
     markerById(id, myLatlng);
 
@@ -146,8 +145,8 @@ function initMap(id) {
             };
 
             //Create a map with the current browser position
-            map=new Mapa()
-            map.createMap(pos,'mapa');
+            var mapaInstance = new Mapa();
+            mapaInstance.createMap(pos,'mapa');
 
             infoWindow.setPosition(pos);
             infoWindow.setContent('You are here');
@@ -166,7 +165,7 @@ function initMap(id) {
                 });
             });
             //Create first marker in the actual position
-            var markerCluster = new MarkerClusterer(map, markers, {imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'});
+            var markerCluster = new markerClusterer.MarkerClusterer({map: map, markers: markers});
             service = new google.maps.places.PlacesService(map);
             markerById(id, myLatlng);
 
