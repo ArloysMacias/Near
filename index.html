@@ -244,7 +244,18 @@
 
 <!--GoogleMapsAPI-->
 <script src="https://unpkg.com/@googlemaps/markerclusterer/dist/index.min.js"></script>
-<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA6aJC8qxLMuctL0B1OB33FfastaJ1Y-54&callback=initMap&libraries=places"></script>
+<script src="config.js"></script>
+<script src="map.js"></script>
+<script>
+  function loadGoogleMapsApi() {
+    const script = document.createElement('script');
+    script.src = `https://maps.googleapis.com/maps/api/js?key=${window.appConfig.googleMapsApiKey}&callback=initMap&libraries=places`;
+    script.async = true;
+    script.defer = true;
+    document.head.appendChild(script);
+  }
+  loadGoogleMapsApi();
+</script>
 
 <!--MyScript-->
 <script src="assets/js/map.js"></script>
